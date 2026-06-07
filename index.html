@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>希創回記 - CHARACTER DB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>希創回記 CHARACTER DB</h1>
+        <!-- 検索窓 -->
+        <input type="text" id="searchBar" placeholder="名前、キャッチコピー、能力で検索..." onkeyup="searchCharacters()">
+    </header>
+
+    <main class="character-container">
+        
+        <!-- ================= キャラクターカード：レフィダー ================= -->
+        <div class="char-card" data-name="レフィダー ヘラルド 義憎の天才" data-tag="感情系統 憎悪の支配者 宇宙管理軍">
+            
+            <!-- カード上部：簡易プロフィール -->
+            <div class="card-header">
+                <div class="char-main-info">
+                    <span class="catch-copy">― 義憎の天才 ―</span>
+                    <h2 class="char-name">レフィダー・ヘラルド</h2>
+                    <span class="char-gender-age">女性（一人称: 俺） / 物語開始時: 18歳 (22歳入軍)</span>
+                </div>
+            </div>
+
+            <!-- タブ切り替えボタン -->
+            <div class="tab-menu">
+                <button class="tab-btn active" onclick="switchTab(this, 'profile')">プロフィール</button>
+                <button class="tab-btn" onclick="switchTab(this, 'status')">ステータス</button>
+                <button class="tab-btn" onclick="switchTab(this, 'skills')">複雑型・能力</button>
+            </div>
+
+            <!-- 1. プロフィールタブ -->
+            <div class="tab-content active" id="profile">
+                <table class="info-table">
+                    <tr><th>誕生日</th><td>8/25 (乙女座)</td><th>血液型</th><td>A－型</td></tr>
+                    <tr><th>身長</th><td>182cm <small>(18歳時170)</small></td><th>体重</th><td>65kg</td></tr>
+                    <tr><th>誕生花</th><td>ルドベキア（「正義」）</td><th>頭脳指数</th><td>412</td></tr>
+                    <tr><th>イメージ</th><td colspan="3"><span class="color-badge red">紅</span> <span class="color-badge blue">青</span></td></tr>
+                </table>
+
+                <div class="section-title">容姿</div>
+                <p class="text-block">黒髪に赤のグラデーションを混ぜたような髪。青く澄んだ目。基本的に薄暗い青色の首を隠す長袖と黒の長ズボン。兄の死後、緑色のリングピアスと、緑に光る舌ピアス（よく見ないとわからない）を装着している。見た目は美形な男子。</p>
+
+                <div class="section-title">性格</div>
+                <div class="personality-box">
+                    <strong>【表向き】</strong><br>
+                    優柔不断だが、その頭脳で正解を導ける。感性や常識があり、面倒を見たくなるような仕草をする、頭脳明晰タイプの主人公によくあるタイプ。
+                </div>
+                <div class="personality-box real">
+                    <strong>【本来の性質】</strong><br>
+                    正解をその場で選び突き進み、目的のためなら非人道的なことも平気でする冷酷さを兼ね備える。リーダーシップがあり、みんなを惹き付ける力がある。
+                </div>
+
+                <div class="section-title">特徴・固有フラグ</div>
+                <ul class="feature-list">
+                    <li>過去を異常なほどに隠そうとする</li>
+                    <li>仲間は大切にする / 感性がないなりに優しい</li>
+                    <li>しゃべる時にあまり口を開けない</li>
+                    <li>要領がよく、教わったことをすぐに覚える</li>
+                    <li>勉強（特に化学関係）が得意</li>
+                    <li>相手を自分に損なく利用する / 自分を偽る</li>
+                    <li><span class="weakness">弱点:</span> 足を防御できない</li>
+                </ul>
+            </div>
+
+            <!-- 2. ステータスタブ -->
+            <div class="tab-content" id="status">
+                <div class="section-title">能力系統（合計: 17）</div>
+                <table class="system-table">
+                    <tr><td>超常: 6</td><td>概念: 1</td><td>自然: 0</td><td>狂調: 2</td><td>感情: 8</td></tr>
+                </table>
+
+                <div class="section-title">実力ステータス <small>(■通常時合計:1591 / ■理論値合計:5550)</small></div>
+                
+                <!-- パラメータ：体力 -->
+                <div class="status-row">
+                    <div class="status-label"><span>体力</span><span>310 / 620</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 50%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：素早さ -->
+                <div class="status-row">
+                    <div class="status-label"><span>素早さ</span><span>61 / 1000</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 6.1%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：デネージェ -->
+                <div class="status-row">
+                    <div class="status-label"><span>デネージェ</span><span>600 / 600</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 100%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：アタック -->
+                <div class="status-row">
+                    <div class="status-label"><span>アタック</span><span>74 / 2600</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 2.8%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：戦闘センス -->
+                <div class="status-row">
+                    <div class="status-label"><span>戦闘センス</span><span>245 / 245</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 100%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：体術 -->
+                <div class="status-row">
+                    <div class="status-label"><span>体術</span><span>83 / 150</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 55%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：技術 -->
+                <div class="status-row">
+                    <div class="status-label"><span>技術</span><span>148 / 150</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 98%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：エイム -->
+                <div class="status-row">
+                    <div class="status-label"><span>エイム</span><span>20 / 90</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 22%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+                <!-- パラメータ：防御・耐性 -->
+                <div class="status-row">
+                    <div class="status-label"><span>防御・耐性</span><span>50 / 95</span></div>
+                    <div class="bar-container"><div class="bar normal" style="width: 52%;"></div><div class="bar limit" style="width: 100%;"></div></div>
+                </div>
+            </div>
+
+            <!-- 3. 技・能力タブ -->
+            <div class="tab-content" id="skills">
+                <div class="section-title">所持能力</div>
+                <ul class="feature-list">
+                    <li><strong>感情系統:</strong> 憎悪の支配者</li>
+                    <li><strong>超常系統:</strong> ？？？を扱う力を所持</li>
+                </ul>
+
+                <div class="section-title">発動条件</div>
+                <div class="condition-box">
+                    ※義憎錬魔以外は片方のみで発動可能<br>
+                    ① 技名を声で発すること<br>
+                    ② 相手に負の感情を強く抱いていること
+                </div>
+
+                <div class="section-title">複雑型一覧</div>
+                
+                <div class="skill-block special">
+                    <div class="skill-name">十八番：義憎錬魔</div>
+                    <p class="skill-desc">？？？</p>
+                </div>
+
+                <div class="skill-block">
+                    <div class="skill-name">憎悪之血祭 <span class="ruby">（ハテレドブロードバフ）</span></div>
+                    <p class="skill-desc">剣か手にデネージェを込めて能力付きの弾幕を四方八方に出しまくる。</p>
+                </div>
+
+                <div class="skill-block">
+                    <div class="skill-name">憎悪之鉄槌 <span class="ruby">（ハテレドサンクティオン）</span></div>
+                    <p class="skill-desc">能力で生成した剣を狭い範囲で爆散させる。自分が食らってもダメージは負わない。</p>
+                </div>
+
+                <div class="skill-block">
+                    <div class="skill-name">憎焉之破壊 <span class="ruby">（ハテレドブレイク）</span></div>
+                    <p class="skill-desc">能力で生成した武器から、憎悪の感情によって威力が上がる波動を出して破壊する。</p>
+                </div>
+
+                <div class="skill-block">
+                    <div class="skill-name">憎悪之反射 <span class="ruby">（ハテレドリフレクション）</span></div>
+                    <p class="skill-desc">相手の攻撃を反射する。相手に憎悪を抱いているほど反射できる最大威力があがる。反射の反射をされた場合、自動でまた反射をする。</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- ================= キャラクターカードここまで ================= -->
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
