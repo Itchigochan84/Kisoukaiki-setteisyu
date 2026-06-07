@@ -1,0 +1,243 @@
+body {
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    padding: 15px 0;
+}
+
+h1 {
+    font-size: 20px;
+    color: #66fcf1;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#searchBar {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid #1f2833;
+    background-color: #1f2833;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchBar:focus {
+    border-color: #66fcf1;
+}
+
+/* カード全体の設計 */
+.char-card {
+    background: #151a22;
+    border: 1px solid #1f2833;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.catch-copy {
+    color: #ff4565;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.char-name {
+    margin: 2px 0 5px 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+.char-gender-age {
+    font-size: 12px;
+    color: #85929E;
+}
+
+/* タブメニュー */
+.tab-menu {
+    display: flex;
+    gap: 5px;
+    margin: 15px 0;
+    border-bottom: 2px solid #1f2833;
+    padding-bottom: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #85929E;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    color: #66fcf1;
+    border-bottom: 2px solid #66fcf1;
+}
+
+/* タブコンテンツの表示・非表示 */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* プロフィール用装飾 */
+.section-title {
+    font-size: 13px;
+    color: #66fcf1;
+    border-left: 3px solid #66fcf1;
+    padding-left: 8px;
+    margin: 15px 0 8px 0;
+    font-weight: bold;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.info-table th {
+    background: #1f2833;
+    color: #66fcf1;
+    text-align: left;
+    padding: 6px;
+    width: 25%;
+}
+
+.info-table td {
+    padding: 6px;
+    border-bottom: 1px solid #1f2833;
+}
+
+.color-badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.color-badge.red { background: #ba1331; color: white; }
+.color-badge.blue { background: #135ba1; color: white; }
+
+.personality-box {
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.personality-box.real {
+    border-left: 3px solid #ff4565;
+    background: rgba(255, 69, 101, 0.05);
+}
+
+.text-block {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.feature-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.weakness { color: #ff4565; font-weight: bold; }
+
+/* ステータスタブ用装飾 */
+.system-table {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    background: #1f2833;
+    border-radius: 6px;
+    padding: 8px 0;
+}
+
+.status-row {
+    margin-bottom: 10px;
+}
+
+.status-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.bar-container {
+    width: 100%;
+    height: 12px;
+    background: #1f2833;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+}
+/* 理論値（最大のベース）を赤、通常時を青で重ねる */
+.bar.limit { background: #ff4565; z-index: 1; }
+.bar.normal { background: #007bff; z-index: 2; }
+
+/* 技・能力用装飾 */
+.condition-box {
+    background: #201419;
+    border: 1px solid #4a1525;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    color: #ff85a1;
+}
+
+.skill-block {
+    background: #1f2833;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.skill-block.special {
+    border: 1px solid #66fcf1;
+    background: rgba(102, 252, 241, 0.05);
+}
+
+.skill-name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+.skill-name .ruby {
+    font-size: 10px;
+    color: #66fcf1;
+    margin-left: 5px;
+}
+
+.skill-desc {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    color: #c5c6c7;
+    line-height: 1.4;
+}
