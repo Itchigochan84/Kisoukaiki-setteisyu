@@ -11,20 +11,21 @@
     <header>
         <h1>希創回記 CHARACTER DB</h1>
         <!-- 検索窓 -->
-        <input type="text" id="searchBar" placeholder="名前、キャッチコピー、能力で検索..." onkeyup="searchCharacters()">
+        <input type="text" id="searchBar" placeholder="名前、役職、種族、能力などで検索..." onkeyup="searchCharacters()">
     </header>
 
     <main class="character-container">
         
         <!-- ================= キャラクターカード：レフィダー ================= -->
-        <div class="char-card" data-name="レフィダー ヘラルド 義憎の天才" data-tag="感情系統 憎悪の支配者 宇宙管理軍">
+        <div class="char-card" data-name="レフィダー ヘラルド 義憎の天才 第3部隊戦闘部" data-tag="不死族 感情系統 憎悪の支配者 主人公">
             
             <!-- カード上部：簡易プロフィール -->
             <div class="card-header">
                 <div class="char-main-info">
                     <span class="catch-copy">― 義憎の天才 ―</span>
                     <h2 class="char-name">レフィダー・ヘラルド</h2>
-                    <span class="char-gender-age">女性（一人称: 俺） / 物語開始時: 18歳 (22歳入軍)</span>
+                    <div class="char-post">役職：宇宙管理軍第3部隊戦闘部隊員</div>
+                    <span class="char-gender-age">男性 / 物語開始時: 18歳 (22歳入軍)</span>
                 </div>
             </div>
 
@@ -38,10 +39,10 @@
             <!-- 1. プロフィールタブ -->
             <div class="tab-content active" id="profile">
                 <table class="info-table">
-                    <tr><th>誕生日</th><td>8/25 (乙女座)</td><th>血液型</th><td>A－型</td></tr>
+                    <tr><th>種族</th><td>不死族</td><th>血液型</th><td>A－型</td></tr>
+                    <tr><th>誕生日</th><td>8/25 (乙女座)</td><th>頭脳指数</th><td>412</td></tr>
                     <tr><th>身長</th><td>182cm <small>(18歳時170)</small></td><th>体重</th><td>65kg</td></tr>
-                    <tr><th>誕生花</th><td>ルドベキア（「正義」）</td><th>頭脳指数</th><td>412</td></tr>
-                    <tr><th>イメージ</th><td colspan="3"><span class="color-badge red">紅</span> <span class="color-badge blue">青</span></td></tr>
+                    <tr><th>誕生花</th><td>ルドベキア（「正義」）</td><th>イメージ</th><td><span class="color-badge refi-red">■</span> <span class="color-badge refi-blue">■</span></td></tr>
                 </table>
 
                 <div class="section-title">容姿</div>
@@ -53,11 +54,11 @@
                     優柔不断だが、その頭脳で正解を導ける。感性や常識があり、面倒を見たくなるような仕草をする、頭脳明晰タイプの主人公によくあるタイプ。
                 </div>
                 <div class="personality-box real">
-                    <strong>【本来の性質】</strong><br>
+                    <strong>【本来】</strong><br>
                     正解をその場で選び突き進み、目的のためなら非人道的なことも平気でする冷酷さを兼ね備える。リーダーシップがあり、みんなを惹き付ける力がある。
                 </div>
 
-                <div class="section-title">特徴・固有フラグ</div>
+                <div class="section-title">特徴・個性</div>
                 <ul class="feature-list">
                     <li>過去を異常なほどに隠そうとする</li>
                     <li>仲間は大切にする / 感性がないなりに優しい</li>
@@ -66,6 +67,7 @@
                     <li>勉強（特に化学関係）が得意</li>
                     <li>相手を自分に損なく利用する / 自分を偽る</li>
                     <li><span class="weakness">弱点:</span> 足を防御できない</li>
+                    <li><span class="jirei">地雷:</span> 自身の性別関係について言及されること</li>
                 </ul>
             </div>
 
